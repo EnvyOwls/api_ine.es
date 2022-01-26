@@ -9,10 +9,10 @@ void main(){
 
 class MyApp extends StatefulWidget{
 
-  _estadisticas createState() => _estadisticas();
+  _MyApp createState() => _MyApp();
 }
 
-class _estadisticas extends State<MyApp>{
+class _MyApp extends State<MyApp>{
 
   Future<List<Data>>? _dataINE;
 
