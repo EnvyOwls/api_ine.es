@@ -27,12 +27,10 @@ class _estadisticas extends State<MyApp>{
       String data = utf8.decode(response.bodyBytes);
       final jsonData = json.decode(data);//jsonDecode(data);
 
-      //int i = 0;
       for(var migrante in jsonData){
         datos.add(
             Data(migrante['Nombre'])
         );
-        // print(migrante['Nombre']);i++;
       }
     }
     else{
@@ -66,11 +64,7 @@ class _estadisticas extends State<MyApp>{
             builder: (context, snapshot) {
               size = MediaQuery.of(context).size.width;
               if(snapshot.hasData){
-                //print(snapshot.data);
                 return Container(
-                  //widthFactor: size*0.5,
-                  //width: size*0.5,
-                  //alignment: Alignment.topRight,
                   child: Table(
                     children: _listNacionalidad(snapshot.data),
                     border: TableBorder.all(color: Colors.indigo),
@@ -83,11 +77,7 @@ class _estadisticas extends State<MyApp>{
               );
             },
           ),
-          //Table(
-          //children: [TableRow(children: [Text("Nacionalidad"), Text('Cantidad')])],
-          //border: TableBorder.all(color: Colors.blueAccent),
         )
-      //),
     );
   }
 
